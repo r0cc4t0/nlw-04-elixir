@@ -9,7 +9,7 @@ defmodule RocketpayWeb.AccountsController do
     with {:ok, %Account{} = account} <- Rocketpay.deposit(params) do
       conn
       |> put_status(:ok)
-      |> render("update.json", account: account)
+      |> render("deposit.json", account: account)
     end
   end
 
@@ -17,7 +17,7 @@ defmodule RocketpayWeb.AccountsController do
     with {:ok, %Account{} = account} <- Rocketpay.withdrawal(params) do
       conn
       |> put_status(:ok)
-      |> render("update.json", account: account)
+      |> render("withdrawal.json", account: account)
     end
   end
 end

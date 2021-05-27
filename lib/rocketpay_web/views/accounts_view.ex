@@ -3,8 +3,7 @@ defmodule RocketpayWeb.AccountsView do
 
   def render("deposit.json", %{account: %Account{id: account_id, balance: balance}}) do
     %{
-      message: "Ballance changed successfully.",
-      operation: "Deposit",
+      message: "Deposit: Ballance changed successfully.",
       account: %{
         id: account_id,
         balance: balance
@@ -14,8 +13,7 @@ defmodule RocketpayWeb.AccountsView do
 
   def render("withdrawal.json", %{account: %Account{id: account_id, balance: balance}}) do
     %{
-      message: "Ballance changed successfully.",
-      operation: "Withdrawal",
+      message: "Withdrawal: Ballance changed successfully.",
       account: %{
         id: account_id,
         balance: balance
